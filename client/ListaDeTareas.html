@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const task =[
+            {title: "Terminar el modulo 1 de el curso de manipulacion de arrays", done: true},
+            {title: "Terminar el modulo 2 de el curso de manipulacion de arrays", done: false},
+            {title: "Terminar el modulo 3 de el curso de manipulacion de arrays", done: true},
+        ]
+        const app = document.getElementById("app")
+
+        task.forEach(task =>{
+            app.innerHTML += `<li>Tarea: ${task.title} <input type="checkbox" ${task.done ? 'checked' : ''}/> </li>`
+        })
+    </script>
+</body>
+</html>
